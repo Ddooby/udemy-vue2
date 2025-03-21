@@ -15,7 +15,7 @@
     </div>
 
     <!-- mt-5 는 Bootstrap 의 Spacing 관련 top margin 5단계 -->
-    <article class="row mt-5">
+    <article class="row py-5">
       <h2>Skills</h2>
       <!--
       <dl>
@@ -48,16 +48,19 @@
         </dd>
       </dl>
        -->
-      <dl v-for="(skill, i) in skill" :key="i">
-        <dt class="lead">{{ skill.name }}</dt>
-        <dd>
-          <!-- <div 
-            class="progress" 
-            role="progressbar"
-          >
-            <div class="progress-bar" :style="witdh: {{skill.point}}"></div>
-          </div> -->
-        </dd>
+      <dl>
+        <!-- <template v-for="(skill, i) in skills" :key="i"> -->
+        <template v-for="skill in skills" >
+          <dt class="lead">{{ skill.name }}</dt>
+          <dd>
+            <div 
+              class="progress" 
+              role="progressbar"
+            >
+              <div class="progress-bar text-end pe-3" :style="{ witdh: skill.point }">{{ skill.point }}</div>
+            </div>
+          </dd>
+        </template>
       </dl>
     </article>
   </section>
