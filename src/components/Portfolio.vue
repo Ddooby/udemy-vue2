@@ -22,7 +22,7 @@
       -->
 
       <li v-for="(data, i) in data" :key="i" class="col-md-4">
-        <img :src="data.imgUrl" alt="1">
+        <img :src="data.imgUrl" :alt="i">
         <h3>{{ data.title }}</h3>
         <p>{{ data.desc }}</p>
       </li>
