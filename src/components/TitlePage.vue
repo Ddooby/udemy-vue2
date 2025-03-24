@@ -15,7 +15,7 @@
   </section>
 </template>
 <script setup>
-  const title = `Hello,<br>I'm Doolee`;
+  const title = `Hello,<br>I'm Ddooby`;
 </script>
 <style scoped lang="scss">
   #title {

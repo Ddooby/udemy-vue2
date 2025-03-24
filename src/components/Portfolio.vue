@@ -25,14 +25,23 @@
         <img :src="data.imgUrl" :alt="i">
         <h3>{{ data.title }}</h3>
         <p>{{ data.desc }}</p>
+        <router-link
+          class="btn btn-primary"
+          :to="'/detail/' + data.id"
+        >
+          상세보기
+        </router-link>
       </li>
     </ul>
   </section>
 </template>
 
 <script setup>
-import data from '../assets/portfolio';
-console.log(data);
+  const props = defineProps({
+    data: Array,
+  })
+
+  console.log(props.data);
 </script>
 
 <style scoped lang="scss">

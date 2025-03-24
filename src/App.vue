@@ -2,6 +2,8 @@
 import TitlePage from './components/TitlePage.vue';
 import Portfolio from './components/Portfolio.vue';
 import About from './components/About.vue';
+import Navbar from './components/Navbar.vue';
+import data from './assets/portfolio';
 </script>
 
 <template>
@@ -35,6 +37,7 @@ import About from './components/About.vue';
   -->
 
   <!-- MPA -->
+  <!--
   <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top" data-bs-theme="dark">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Navbar</a>
@@ -56,7 +59,9 @@ import About from './components/About.vue';
       </div>
     </div>
   </nav>
-  <router-view></router-view>
+  -->
+  <Navbar />
+  <router-view :data="data"/>
 </template>
 
 <!-- lang="scss" 를 쓰면 sass 문법을 사용할 수 있다. -->
